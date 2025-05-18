@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+        <img class="logo" src="/images/logo7.png" alt="Logo"><span>StayEase</span>
+      </a>
+      <div class="navbar-nav ms-auto me-2 d-flex justify-content-center" style=" background-color: white; width: 40vw;">
+        <form class="d-flex" role="search">
+          <input class="form-control search-bar me-2" type="search" placeholder="Search Destination" aria-label="Search"/>
+          <button class="btn search btn-outline-warning" type="submit"><i class="fa-solid fa-magnifying-glass"></i>search</button>
+        </form>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse ms-auto" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="/"><div>About us</div></a>
+          <a class="nav-link" href="/listings"><div>Explore</div></a>
+          <a class="nav-link" href="/listings/new"><div>Add your place</div></a>
+        </div>
+        <div class="navbar-nav ms-auto">
+          <% if(!(currUser)){ %>
+          <a class="nav-link" href="/signup"><div>Signup</div></a>
+          <a class="nav-link" href="/login"><div>Login</div></a>
+          <% } %>
+          <% if(currUser){ %>
+          <a class="nav-link" href="/logout"><div>Logout</div></a>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </nav>

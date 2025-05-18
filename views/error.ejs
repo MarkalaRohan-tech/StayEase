@@ -1,0 +1,20 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <center>
+  <div class="errDisplay">
+    <dotlottie-player
+      class="errImg"
+      src="https://lottie.host/ac8c21f2-21b6-4ac5-821a-4a21b25891bf/FpbHf9mo9x.lottie"
+      background="transparent"
+      speed="1"
+      style="width: 300px; height: 300px"
+      loop
+      autoplay
+    ></dotlottie-player>
+    <h1 class="errCode">Error: <%= statusCode %></h1>
+    <br>
+    <p class="errMsg">&#x26A0;  <%= message %></p>
+    <br><br><br>
+  </div>
+  </center>
+</body>

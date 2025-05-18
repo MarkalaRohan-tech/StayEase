@@ -1,0 +1,54 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <h2>Edit Listing</h2>
+    <hr>
+    <div class="row">
+        <div class="col-8 offset-2">
+        <form enctype="multipart/form-data" class="needs-validation" novalidate action="/listings/<%=data._id %>?_method=PUT" method="post">
+            <div class="mb-3">
+            <label class="form-label" for="title">Title:</label>
+            <input required type="text" class="form-control" name="listing[title]" id="title" value="<%=data.title %>">
+            <div class="invalid-feedback">Title is missing</div>
+            <div class="valid-feedback">Done!</div>
+        </div>
+            <div class="mb-3">
+            <label class="form-label" for="description">Description:</label>
+            <textarea type="text" class="form-control" name="listing[description]" id="description"><%=data.description %></textarea>
+            <div class="invalid-feedback">Description is missing</div>
+            <div class="valid-feedback">Done!</div>    
+        </div>
+        <div class="mb-3">
+            <h6>Original Listing Image:</h6>
+            <img src="<%= originalImageUrl %>" alt="preview" style="border-radius: 15px;">
+        </div> 
+            <div class="mb-3">
+            <label class="form-label" for="image">Upload New Image:</label>
+            <input type="file" class="form-control" name="listing[image]" id="image">
+            <div class="invalid-feedback">Please provide image</div>
+        </div>
+            <div class="mb-3">
+            <label class="form-label" for="price">Price:</label>
+            <input required type="text" class="form-control" name="listing[price]" id="price" value="<%=data.price %>">
+            <div class="invalid-feedback">Please enter valid price</div>
+            <div class="valid-feedback">Done!</div>
+        </div>
+            <div class="row">
+            <div class="mb-3 col-md-8">
+            <label class="form-label" for="location">Location:</label>
+            <input required type="text" class="form-control" name="listing[location]" id="location" value="<%=data.location %>">
+            <div class="invalid-feedback">Location is missing</div>
+            <div class="valid-feedback">Done!</div>
+        </div>
+            <div class="mb-3 col-md-4">
+            <label class="form-label" for="country">Country:</label>
+            <input required type="text" class="form-control" name="listing[country]" id="country" value="<%=data.country %>">
+            <div class="invalid-feedback">Country is missing</div>
+            <div class="valid-feedback">Done!</div>
+        </div>
+            </div>
+            <center><button class="btn btn-warning">Save Edit</button></center>
+            <br><br>
+        </form>
+    </div>
+</div>
+</body>
