@@ -37,71 +37,12 @@
 <body>
     <h1>All Listings</h1>
     <hr>
-    <center>
-      <div class="navbar-nav ms-auto me-2 d-flex justify-content-center" style=" background-color: white; width: 40vw;">
-        <form class="d-flex" role="search">
-          <input class="form-control search-bar me-2" type="search" placeholder="Search Destination" aria-label="Search"/>
-          <button class="btn search btn-outline-warning" type="submit"><i class="fa-solid fa-magnifying-glass"></i>search</button>
-        </form>
-      </div>
-    <div id="filters">
-      <div class="filter">
-        <div class="icon"><i class="fa-solid fa-fire"></i></div>
-        <p>Trending</p>
-      </div>
-      <div class="filter">
-        <div><i class="fa-solid fa-bed"></i></div>
-        <p>Rooms</p>
-      </div>
-      <div class="filter">
-        <div><i class="fa-solid fa-city"></i></div>
-        <p>Iconic Cities</p>
-      </div>
-      <div class="filter">
-        <div><i class="fa-solid fa-mountain-sun"></i></div>
-        <p>Amazing Views</p>
-      </div>
-      <div class="filter">
-        <div><i class="fa-solid fa-umbrella-beach"></i></div>
-        <p>Beach</p>
-      </div>
-      <div class="filter">
-        <div><i class="fa-solid fa-water"></i></div>
-        <p>LakeFront</p>
-      </div>
-      <div class="filter">
-        <div><i class="fa-solid fa-mountain"></i></div>
-        <p>Mountain</p>
-      </div>
-      <div class="filter">
-        <div><i class="fa-solid fa-gopuram"></i></div>
-        <p>Castle</p>
-      </div>
-      <div class="filter">
-        <div><i class="fa-solid fa-person-swimming"></i></div>
-        <p>Swimming pool</p>
-      </div>
-      <div class="filter">
-        <div><i class="fa-solid fa-tents"></i></div>
-        <p>Camping</p>
-      </div>
-      <div class="filter">
-        <div><i class="fa-solid fa-seedling"></i></div>
-        <p>Farms</p>
-      </div>
-      <div class="filter">
-        <div><i class="fa-solid fa-snowflake"></i></div>
-        <p>Arctic</p>
-      </div>
-      <div class="tax-toggle">
-        <div class="form-check-reverse form-switch">
-          <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
-          <b><label class="form-check-label" for="switchCheckDefault">Display total after Taxes</label></b>
-        </div>
-        
-      </div>
+  <div class="tax-toggle">
+    <div class="form-check-reverse form-switch">
+      <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+      <b><label class="form-check-label" for="switchCheckDefault">Display total after Taxes</label></b>
     </div>
-  </center>
+  </div>
     <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
     <% for (let listing of allListings) {%>
         <a href="/listings/<%= listing._id %>" class="listing-link">
